@@ -10,6 +10,8 @@ describe Blog do
     it { expect(blog).to validate_presence_of :title }
     it { expect(blog).to validate_uniqueness_of :title }
 
+    it { expect(blog).to validate_presence_of :comments_feed_url }
+    it { expect(blog).to validate_uniqueness_of :comments_feed_url }
 
     it "saves attr" do
       blog.save!
