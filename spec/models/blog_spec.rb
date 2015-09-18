@@ -8,6 +8,8 @@ describe Blog do
   describe "attrs" do
 
     it { expect(blog).to validate_presence_of :title }
+    it { expect(blog).to validate_uniqueness_of :title }
+
 
     it "saves attr" do
       blog.save!
