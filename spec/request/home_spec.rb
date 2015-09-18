@@ -28,5 +28,17 @@ describe "Home Page" do
       end
     end
 
+    context "populated db" do
+      before(:each) do
+        visit "/"
+      end
+
+      it "show a list of blogs" do
+        pending "Need to write other unit tests"
+        expect(page).to have_selector "li a", text: "Mashable"
+      end
+
+    end
+
   end
 end
